@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Le Fournil - Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Le Fournil</h1>
+        <p>Bienvenue dans notre boulangerie</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="carte.html">Notre carte</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <h2>Formulaire de précommande</h2>
+
+        <p>Remplissez ce formulaire pour passer une précommande.</p>
+
+        <form method="post" action="#">
+
+            <fieldset>
+                <legend>Vos coordonnées</legend>
+
+                <p>
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required>
+                </p>
+
+                <p>
+                    <label for="email">E-mail :</label>
+                    <input type="email" id="email" name="email" required>
+                </p>
+
+                <p>
+                    <label for="telephone">Téléphone :</label>
+                    <input type="tel" id="telephone" name="telephone">
+                </p>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Votre commande</legend>
+
+                <p>
+                    <label for="date">Date de retrait :</label>
+                    <input type="date" id="date" name="date" required>
+                </p>
+
+                <p>
+                    <label for="produit">Produit :</label>
+                    <select id="produit" name="produit">
+                        <option value="baguette">Baguette</option>
+                        <option value="campagne">Pain de campagne</option>
+                        <option value="complet">Pain complet</option>
+                        <option value="croissant">Croissant</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="quantite">Quantité :</label>
+                    <input type="number" id="quantite" name="quantite"
+                           min="1" max="20" required>
+                </p>
+
+                <p>Mode de retrait :</p>
+
+                <p>
+                    <input type="radio" id="magasin" name="retrait"
+                           value="magasin" required>
+                    <label for="magasin">En magasin</label>
+
+                    <input type="radio" id="livraison" name="retrait"
+                           value="livraison">
+                    <label for="livraison">Livraison</label>
+                </p>
+
+                <p>
+                    <label for="message">Message :</label>
+                </p>
+
+                <p>
+                    <textarea id="message" name="message"
+                              maxlength="300" rows="5" cols="40"></textarea>
+                </p>
+
+            </fieldset>
+
+            <p>
+                <input type="checkbox" id="conditions"
+                       name="conditions" required>
+                <label for="conditions">
+                    J'accepte les conditions générales.
+                </label>
+            </p>
+
+            <p>
+                <button type="submit">Envoyer la précommande</button>
+                <button type="reset">Effacer</button>
+            </p>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>Le Fournil - Tous droits réservés 2026</p>
+    </footer>
+
+</body>
+</html>
